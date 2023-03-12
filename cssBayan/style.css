@@ -3,6 +3,7 @@ body {
     overflow-x: hidden;
     margin-right: calc(-1 * (100vw - 100%));
     font-family: "Roboto", sans-serif;
+    font-size: 3rem;
 }
 
 .bayan{
@@ -33,6 +34,14 @@ body {
     border-width: 0.01em 0 0 0;
 }
 
+.inside-block{
+    height:100%;
+}
+
+.inside-block img{
+    height:100%;
+    weight:100%;
+}
 .bayan-input {
     position:static;
     display:none;
@@ -52,11 +61,13 @@ body {
 	-moz-transition: all 1s;
 }
 
+
 .bayan-content {
     cursor:pointer;
     max-width: 100vw;
     border-top:none;
-    display:none;
+    height:0;
+    overflow: hidden;
     transition: all 1s;
 	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
@@ -66,22 +77,13 @@ body {
     cursor: pointer;
 }
 
-.bayan-item img{
-    width: 60%;
-    height: 40vh;
-}
-
-img{
-    width: 30rem;
-    height: 21rem;
-}
-
 p {
     font-size: 1.5em;
     font-weight: bold;
 }
 
 .animation {
+    padding:0rem;
     opacity: 0;
     -webkit-transition: -webkit-transform .5s ease-in-out;
             transition:         transform .8s ease-in-out;
@@ -96,7 +98,8 @@ p {
 
 .bayan-input:checked ~ .bayan-content{
     background-color: #eee;
-    display: block;
+    height:30vw;
+    
 }
 
 .bayan-input:checked ~ .bayan-trigger .animation{
@@ -118,7 +121,7 @@ p {
     }
     
     .bayan-trigger:hover ~ .bayan-content{ 
-        display: block;
+        height:30vw;
     }
     
     .wrapper-input-trigger:hover > div p{ 
@@ -127,7 +130,7 @@ p {
     }
     
     .bayan-content:hover{
-        display:block;
+        height:30vw;
     }
     
     .bayan-input:hover ~ .bayan-trigger .animation{ 
@@ -145,13 +148,10 @@ p {
 }
 }
 
-@media screen and (min-device-width: 320px) and (max-device-height: 568px) {
-    img{
-        max-width: 10rem;
-        max-height: 7rem;
-    }
+@media screen and (min-device-width: 320px) and (min-device-height: 568px) {
+
     body{
-        font-size:0.5rem;
+        font-size:0.2rem;
     }
 
     .animation{
@@ -159,13 +159,10 @@ p {
     }
 }
 
-@media screen and (min-device-width: 820px) and (max-device-height: 1180px) {
-    img{
-        max-width: 20rem;
-        max-height: 14rem;
-    }
+@media screen and (min-device-width: 820px) and (min-device-height: 1180px) {
+
     body{
-        font-size:1rem;
+        font-size: 0.5rem;
     }
 
     .animation{
@@ -173,7 +170,9 @@ p {
     }
 }
 
-@media screen and (min-device-width: 1920px) and (max-device-height: 1080px) {
-
+@media screen and (min-device-width: 1920px) and (min-device-height: 1080px) {
+    body{
+        font-size:5rem;
+    }
 }
 
