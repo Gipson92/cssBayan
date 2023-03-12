@@ -1,7 +1,8 @@
 html,
 body {
-  scrollbar-gutter: stable;
-  font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+    font-family: "Roboto", sans-serif;
 }
 
 .bayan{
@@ -26,8 +27,6 @@ body {
 
 .bayan-item {
     position: static;
-    position: flex;
-    justify-content: center;
     color:rgb(7, 124, 187);
     text-align:center;
     border: 1px solid;
@@ -48,9 +47,9 @@ body {
     flex-direction: row;
     justify-content: space-between;
     cursor:pointer;
-    transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+    transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 }
 
 .bayan-content {
@@ -58,9 +57,9 @@ body {
     max-width: 100vw;
     border-top:none;
     display:none;
-    transition: all 0.5s;
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
+    transition: all 1s;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
 }
 
 .content-trigger{
@@ -73,8 +72,8 @@ body {
 }
 
 img{
-    width: 50%;
-    height: auto;
+    width: 30rem;
+    height: 21rem;
 }
 
 p {
@@ -82,13 +81,13 @@ p {
     font-weight: bold;
 }
 
-
-
 .animation {
     opacity: 0;
     -webkit-transition: -webkit-transform .5s ease-in-out;
             transition:         transform .8s ease-in-out;
   }
+
+/* :checked */
 
 .bayan-input:checked ~ .bayan-trigger{
     background-color: #eee;
@@ -105,11 +104,38 @@ p {
     transform: rotate(45deg);
 }
 
-.bayan-input:hover ~ .bayan-trigger{
-    color: black;
-}
 
-/* :active */
+
+/* :hover */
+
+@media (any-hover: hover) {
+    .bayan-input:hover ~ .bayan-trigger{
+        color: black;
+    }
+    
+    .bayan-input:hover ~ .bayan-trigger{
+        color: black;
+    }
+    
+    .bayan-trigger:hover ~ .bayan-content{ 
+        display: block;
+    }
+    
+    .wrapper-input-trigger:hover > div p{ 
+        opacity: 1;
+        color: black;
+    }
+    
+    .bayan-content:hover{
+        display:block;
+    }
+    
+    .bayan-input:hover ~ .bayan-trigger .animation{ 
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    /* :active */
 .bayan-input:active ~ .bayan-trigger{
     opacity:0.5;
 }
@@ -117,27 +143,37 @@ p {
 .bayan-input:active ~ .bayan-content{
     opacity:0.5;
 }
-
-
-.bayan-input:hover ~ .bayan-trigger{
-    color: black;
 }
 
-.bayan-trigger:hover ~ .bayan-content{ 
-    display: block;
+@media screen and (min-device-width: 320px) and (max-device-height: 568px) {
+    img{
+        max-width: 10rem;
+        max-height: 7rem;
+    }
+    body{
+        font-size:0.5rem;
+    }
+
+    .animation{
+        opacity:1;
+    }
 }
 
-.wrapper-input-trigger:hover > div p{ 
-    opacity: 1;
-    color: black;
+@media screen and (min-device-width: 820px) and (max-device-height: 1180px) {
+    img{
+        max-width: 20rem;
+        max-height: 14rem;
+    }
+    body{
+        font-size:1rem;
+    }
+
+    .animation{
+        opacity:1;
+    }
 }
 
-.bayan-content:hover{
-    display:block;
-    
+@media screen and (min-device-width: 1920px) and (max-device-height: 1080px) {
+
 }
 
-.bayan-input:hover ~ .bayan-trigger .animation{ 
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
