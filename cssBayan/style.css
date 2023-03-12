@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
     margin-right: calc(-1 * (100vw - 100%));
     font-family: "Roboto", sans-serif;
-    font-size: 3rem;
+    font-size: 5rem;
 }
 
 .bayan{
@@ -41,7 +41,7 @@ body {
 
 .inside-block img{
     height:100%;
-    weight:100%;
+    
 }
 .bayan-input {
     position:static;
@@ -156,7 +156,7 @@ p {
 @media screen and (min-device-width: 320px) and (min-device-height: 568px) {
 
     body{
-        font-size:0.2rem;
+        font-size:0.1rem;
     }
 
     .animation{
@@ -167,7 +167,7 @@ p {
 @media screen and (min-device-width: 820px) and (min-device-height: 1180px) {
 
     body{
-        font-size: 0.5rem;
+        font-size: 0.3rem;
     }
 
     .animation{
@@ -177,7 +177,7 @@ p {
 
 @media screen and (min-device-width: 1920px) and (min-device-height: 1080px) {
     body{
-        font-size:5rem;
+        font-size: 2rem;
     }
 }
 
